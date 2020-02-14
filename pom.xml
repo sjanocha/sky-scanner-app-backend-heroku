@@ -13,7 +13,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>sky-scanner-app-backend</name>
 	<description>Backend for android app to gather the best prices of flights</description>
-
+	<properties>
+		<java.version>11</java.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.mapstruct</groupId>
