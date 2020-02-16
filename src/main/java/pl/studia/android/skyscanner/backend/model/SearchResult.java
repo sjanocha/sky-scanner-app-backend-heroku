@@ -25,9 +25,11 @@ public class SearchResult {
     @JsonProperty("fly_to")
     private String flyTo;
     @JsonProperty("date_from")
-    private LocalDate dateFrom;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    private LocalDateTime dateFrom;
     @JsonProperty("date_to")
-    private LocalDate dateTo;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    private LocalDateTime dateTo;
     @JsonProperty("adults")
     private Integer adults;
     @JsonProperty("children")
@@ -39,14 +41,16 @@ public class SearchResult {
     @JsonProperty("transfers_count")
     private Integer transfersCount;
     @JsonProperty("price")
-    private Integer currentPrice;
+    private Double currentPrice;
     @JsonProperty("departure_date")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime exactDepartureDate;
     @JsonProperty("arrival_date")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
     private LocalDateTime exactArrivalDate;
     @JsonProperty("deep_link")
     String deepLink;
+    @JsonProperty("real_transfers_number")
+    private Integer realTransfersNumber;
 
 }

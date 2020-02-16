@@ -22,7 +22,7 @@ public class SearchParametersDTO {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="fk_user_account")
@@ -33,9 +33,9 @@ public class SearchParametersDTO {
     @Column(name="fly_to")
     String flyTo;
     @Column(name="date_from")
-    LocalDate dateFrom;
+    LocalDateTime dateFrom;
     @Column(name="date_to")
-    LocalDate dateTo;
+    LocalDateTime dateTo;
     @Column(name="direct_flights")
     Boolean directFlights;
     @Column
@@ -51,13 +51,13 @@ public class SearchParametersDTO {
     @Column(name = "transfers_count")
     Integer transfersCount;
     @Column(name = "price")
-    Integer currentPrice;
+    Double currentPrice;
     @Column(name = "departure_date")
     LocalDateTime exactDepartureDate;
     @Column(name = "arrival_date")
     LocalDateTime exactArrivalDate;
-    @Column(name="deep_link")
+    @Column(name="deep_link", length = 15000)
     String deepLink;
-
-
+    @Column(name = "real_transfers_number")
+    Integer realTransfersNumber;
 }
